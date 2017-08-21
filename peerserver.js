@@ -1,10 +1,12 @@
 
 const fs = require('fs');
 const express = require('express');
-var PeerServer = require('peer').PeerServer;
-var server = PeerServer({
-    port: process.env.PORT || 3000, 
-    path: '/myapp',
-});
+const ExpressPeerServer = require('peer').ExpressPeerServer;
+const app = express();
 
-server.use(express.static(__dirname + '/public'));
+const server = app.listen(process.env.PORT || 3000);
+const options = {
+};
+app.use('/api', ExpressPeerServer(server, options));
+
+app.use(express.static(__dirname + '/public'));

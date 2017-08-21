@@ -18,7 +18,7 @@ var peer = new Peer({
 						debug: 3,
 						host: 'https://shrouded-woodland-43871.herokuapp.com',
 						port:80,
-						path:'/myapp',
+						path:'/',
 						config: {'iceServers': [
 						{ url: 'stun:stun.l.google.com:19302' },
 						{ url: 'stun:stun1.l.google.com:19302' },
