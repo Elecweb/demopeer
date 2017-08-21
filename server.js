@@ -1,12 +1,8 @@
 const http = require('https');
 const fs = require('fs');
-var options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
-};
 
 
-const server = http.createServer(options,(req,res)=>{
+const server = http.createServer((req,res)=>{
     console.log('req.url',req.url);
     switch(req.url){
         case "/":
@@ -41,4 +37,5 @@ const server = http.createServer(options,(req,res)=>{
     }
     
 });
-server.listen(8080);
+console.log(process.env.PORT);
+server.listen((process.env.PORT || 5000));
