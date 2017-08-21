@@ -17,7 +17,7 @@ navigator.getWebcam = ( navigator.getUserMedia ||
 
 var peer = new Peer({
 						debug: 3,
-						host: '10.40.0.41',
+						host: 'https://shrouded-woodland-43871.herokuapp.com',
 						port:9000,
 						path:'/myapp',
 						config: {'iceServers': [
