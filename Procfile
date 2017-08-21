@@ -1,1 +1,2 @@
-web: node server.js && node peerserver.js
+web: node peerserver.js
+
