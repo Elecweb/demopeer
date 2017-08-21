@@ -14,7 +14,6 @@ navigator.getWebcam = ( navigator.getUserMedia ||
                          navigator.msGetUserMedia);
 
 // PeerJS object ** FOR PRODUCTION, GET YOUR OWN KEY at http://peerjs.com/peerserver **
-
 var peer = new Peer({
 						debug: 3,
 						host: 'https://shrouded-woodland-43871.herokuapp.com',
