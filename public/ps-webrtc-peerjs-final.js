@@ -16,7 +16,7 @@ navigator.getWebcam = ( navigator.getUserMedia ||
 // PeerJS object ** FOR PRODUCTION, GET YOUR OWN KEY at http://peerjs.com/peerserver **
 var peer = new Peer({
 						debug: 3,
-						host: 'https://riderr-components.herokuapp.com/',
+						host: 'riderr-components.herokuapp.com/',
 						port:443,
 						path:'/',
 						config: {'iceServers': [
